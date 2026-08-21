@@ -1,0 +1,213 @@
+.setup-body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+.setup-window {
+    position: relative;
+
+    width: 415px;
+    min-height: 325px;
+
+    padding: 28px 38px;
+
+    background-color: white;
+
+    border: 1px solid #b5b5b5;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.25);
+
+    color: #111;
+}
+
+
+.close-button {
+    position: absolute;
+
+    top: 10px;
+    right: 16px;
+
+    font-size: 22px;
+
+    color: #999;
+
+    cursor: pointer;
+}
+
+
+/* Heading */
+
+.setup-window h2 {
+    margin: 0 0 20px 0;
+
+    font-size: 16px;
+
+    font-weight: normal;
+}
+
+
+.setup-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 45px;
+}
+
+
+/* Left and Right Sections */
+
+.left-section,
+.right-section {
+    flex: 1;
+}
+
+
+/* Section Headings */
+
+.setup-window h3 {
+    margin: 0 0 8px 0;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.setup-window h3 span {
+    color: #888;
+
+    font-weight: normal;
+}
+
+
+/* Orientation */
+
+.orientation {
+    display: flex;
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+
+    font-size: 13px;
+}
+
+.orientation label {
+    white-space: nowrap;                                                /* explain nowrap*/
+}
+
+.orientation input {
+    margin-right: 5px;
+}
+
+
+.paper-size {
+    width: 155px;
+
+    padding: 6px;
+
+    margin-bottom: 20px;
+
+    font-size: 11px;
+
+    border: 1px solid #ddd;
+
+    background-color: #f5f5f5;
+
+    color: #333;
+}
+
+
+.margin-row {
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 11px;
+
+    font-size: 13px;
+}
+
+.margin-row label {
+    width: 47px;
+}
+
+.margin-row input {
+    width: 52px;
+
+    height: 25px;
+
+    padding: 2px 7px;
+
+    font-size: 13px;
+
+    border: 1px solid #999;
+
+    border-radius: 2px;
+}
+
+
+/* Buttons */
+
+.setup-buttons {
+    display: flex;
+
+    align-items: center;
+
+    margin-top: 22px;
+}
+
+
+.setup-buttons button {
+    height: 27px;
+
+    padding: 0 14px;
+
+    font-size: 12px;
+
+    border-radius: 2px;
+
+    cursor: pointer;
+}
+
+
+.ok-button {
+    background-color: #4285e8;
+
+    color: white;
+
+    border: 1px solid #4285e8;
+}
+
+
+/* Cancel */
+
+.cancel-button {
+    margin-left: 16px;
+
+    background-color: #f1f1f1;
+
+    color: #333;
+
+    border: 1px solid #d5d5d5;
+}
+
+
+.default-button {
+    margin-left: auto;
+
+    background-color: #f1f1f1;
+
+    color: #333;
+
+    border: 1px solid #d5d5d5;
+}
