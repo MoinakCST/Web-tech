@@ -1,0 +1,154 @@
+/* Reset default margin and padding */
+body, h1, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the body with a blue theme */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #78b6f8;
+    color: #333; /* Change text color to dark gray */
+}
+
+/* Style the navigation bar */
+.navbar {
+    background-color: #247edf;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Align logo and text horizontally */
+    align-items: center; /* Center vertically */
+    padding: 10px;
+}
+
+/* Style the logo in the navbar */
+.navbar-logo img {
+    max-width: 190px; /* Adjust the size as needed */
+}
+
+/* Style the text within the navigation bar */
+.navbar h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin: 7px;
+}
+
+/* Style the department description section */
+.department-description {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the department description heading */
+.department-description h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Style the department description paragraph */
+.department-description p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Center the faculty container */
+.index-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Style the input and button */
+.input {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.input-text {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #003c80;
+}
+
+/* Style the faculty profile box */
+.faculty-profile {
+    background-color: #c7ffc9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px; /* Set a constant width for the profile box */
+    color: #333; /* Change text color to dark gray */
+}
+
+/* Style faculty name */
+.faculty-name {
+    font-family: "Roboto", "Courier New", monospace;
+    font-size: 28px; /* Increase font size for the name */
+    font-weight: bold; /* Make the name bold */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Style faculty photo with a constant size */
+.faculty-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure image is centered properly */
+    margin-bottom: 15px;
+}
+
+/* Style faculty details */
+.faculty-email,
+.faculty-qualification,
+.faculty-teaching,
+.faculty-research-areas {
+    font-size: 18px; /* Increase font size for details */
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Style faculty subjects and research areas */
+ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Style strong elements */
+strong {
+    font-weight: bold;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIEST CST Faculty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="images/iiest.png" alt="IIEST CST Logo">
+        </div>
+        <div class="navbar-content">
+            <h1>Computer Science and Technology</h1>
+        </div>
+    </nav>
+
+    <div class="index-container">
+        <label class="input" for="facultyName">Enter Faculty Name:</label>
+        <input class="input-text" type="text" id="facultyName" placeholder="Enter faculty name">
+        <button class="button" onclick="loadFacultyProfile()">Load Profile</button>
+        
+        <div id="facultyProfile" class="faculty-profile"></div>
+
+        <section class="department-description">
+            <h2>About the CST Department</h2>
+            <p>  
+            The Department of Computer Science and Technology (CST) was established in 1982. Since its inception, the department has played an important role in developing a vibrant and forward-looking academic environment. Currently, the department offers B.Tech, M.Tech, and PhD programs.
+            <br><br>
+            The department always maintains state of the art infrastructure and facilities for advanced research and consultancy. The department was accredited by the National Board of Accreditation (NBA) as an 'A' grade department and received ISO 9000 certification in 1999-2000. The department was also honored as the DST-FIST sponsored department in 2004. The department was ranked 10 in a nationwide survey conducted by Silicon India in 2012.
+            </p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

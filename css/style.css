@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
 
-    background-color: white;
+    background-color: rgb(122, 59, 59);
 
     font-family: Arial, sans-serif;
 }
@@ -21,7 +21,7 @@
 
     background-color: white;
 
-    border: 1px solid #b5b5b5;
+    border: 1px;
 
     box-shadow:
         0 2px 5px rgba(0, 0, 0, 0.25);
@@ -102,7 +102,7 @@
 }
 
 .orientation label {
-    white-space: nowrap;                                                /* explain nowrap*/
+    white-space: nowrap;              
 }
 
 .orientation input {
@@ -187,9 +187,6 @@
 
     border: 1px solid #4285e8;
 }
-
-
-/* Cancel */
 
 .cancel-button {
     margin-left: 16px;
