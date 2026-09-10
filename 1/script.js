@@ -2,11 +2,11 @@ function loadFacultyProfile() {
     const facultyName = document.getElementById("facultyName").value.trim();
     const basePath = "faculty_profiles/";
     const facultyMapping = {
-        "Abhik Mukherjee": "abhik_mukherjee.html",
+        "Dr. Abhik Mukherjee": "abhik_mukherjee.html",
         "Apurba Sarkar": "apurba_sarkar.html",
-        "Tamal Pal": "tamal_pal.html",
+        "Dr. Tamal Pal": "tamal_pal.html",
         "Ashish Kumar Layek": "ashish_layek.html",
-        "Malay Kule" : "malay_kule.html"
+        "Dr. Malay Kule" : "malay_kule.html"
         // Add more faculty names and HTML file names as needed
     };
 
