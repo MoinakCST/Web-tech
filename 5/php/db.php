@@ -8,7 +8,7 @@
 
 $host = "localhost";
 $user = "root";
-$password = "";
+$password = "6294577710m";
 $database = "college";
 $table = "students1";
 
