@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 | AJAX PHP SQL Node.js</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="hero">
+    <div>
+        <span class="badge">WEB TECHNOLOGY • ASSIGNMENT 5</span>
+        <h1>Student Record Manager</h1>
+        <p>AJAX + PHP + MySQL + Node.js</p>
+    </div>
+    <a class="node-link" href="http://localhost:3000" target="_blank">Test Node.js →</a>
+</header>
+
+<main class="container">
+    <section class="card">
+        <div class="section-heading">
+            <div>
+                <h2>Add Student</h2>
+                <p>Form data is inserted using AJAX without reloading the page.</p>
+            </div>
+            <span class="qtag">Q4</span>
+        </div>
+
+        <form id="studentForm">
+            <div class="form-grid">
+                <label>
+                    Name
+                    <input type="text" id="name" name="name" placeholder="Enter student name" required>
+                </label>
+
+                <label>
+                    Gender (Radio / Option button)
+                    <span class="radio-group">
+                        <span><input type="radio" name="gender" value="Male" required> Male</span>
+                        <span><input type="radio" name="gender" value="Female"> Female</span>
+                        <span><input type="radio" name="gender" value="Other"> Other</span>
+                    </span>
+                </label>
+
+                <label>
+                    Course (List box)
+                    <select id="course" name="course" required>
+                        <option value="">Select course</option>
+                        <option value="CSE">CSE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="IT">IT</option>
+                        <option value="EE">EE</option>
+                        <option value="ME">ME</option>
+                    </select>
+                </label>
+
+                <label>
+                    Marks
+                    <input type="number" id="marks" name="marks" min="0" max="100" placeholder="0 - 100" required>
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" id="email" name="email" placeholder="student@example.com" required>
+                </label>
+
+                <input type="hidden" name="source" value="assignment5">
+            </div>
+            <button class="primary" type="submit">Add Record</button>
+            <span id="formMessage" class="message"></span>
+        </form>
+    </section>
+
+    <section class="card">
+        <div class="section-heading">
+            <div>
+                <h2>Student Records</h2>
+                <p>Type in the search box for live AJAX filtering. Click headers to sort.</p>
+            </div>
+            <span class="qtag">Q3 + Q5 + Q7 + Q8</span>
+        </div>
+
+        <div class="toolbar">
+            <input type="search" id="search" placeholder="Search name, gender, course or email...">
+            <button id="refreshBtn" class="secondary">Refresh</button>
+        </div>
+
+        <div id="tableStatus" class="status">Loading records...</div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th data-sort="id">ID <span>↕</span></th>
+                        <th data-sort="name">Name <span>↕</span></th>
+                        <th data-sort="gender">Gender <span>↕</span></th>
+                        <th data-sort="course">Course <span>↕</span></th>
+                        <th data-sort="marks">Marks <span>↕</span></th>
+                        <th data-sort="email">Email <span>↕</span></th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentBody"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="section-heading">
+            <div>
+                <h2>Marks Analysis</h2>
+                <p>Total, average and grade are calculated by a PHP function using an array.</p>
+            </div>
+            <span class="qtag">Q6</span>
+        </div>
+
+        <div class="stats">
+            <div class="stat"><small>Total Marks</small><strong id="totalMarks">—</strong></div>
+            <div class="stat"><small>Average Marks</small><strong id="avgMarks">—</strong></div>
+            <div class="stat"><small>Grade Rule</small><strong>A / B / C / F</strong></div>
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>Name</th><th>Marks</th><th>Grade</th></tr>
+                </thead>
+                <tbody id="statsBody"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="card instructions">
+        <h2>Assignment Coverage</h2>
+        <ol>
+            <li><b>Q1:</b> <code>node/server.js</code> uses only the built-in <code>http</code> module and returns <b>Hello Node</b>.</li>
+            <li><b>Q2:</b> <code>sql/college.sql</code> creates database <code>college</code>, table <code>students1</code>, and five sample records.</li>
+            <li><b>Q3:</b> AJAX loads all database records into the table.</li>
+            <li><b>Q4:</b> Form contains textbox, radio option, list box, hidden element and sends data through AJAX.</li>
+            <li><b>Q5:</b> Live search updates while typing, without a submit button or page reload.</li>
+            <li><b>Q6:</b> PHP array calculates total/average and assigns A/B/C/F grades.</li>
+            <li><b>Q7:</b> Edit and Delete work through AJAX + PHP without reloading.</li>
+            <li><b>Q8:</b> Clickable column headers sort ascending/descending.</li>
+        </ol>
+    </section>
+</main>
+
+<div id="editModal" class="modal hidden">
+    <div class="modal-box">
+        <button id="closeModal" class="close">×</button>
+        <h2>Edit Student</h2>
+        <form id="editForm">
+            <input type="hidden" id="editId">
+            <label>Name<input id="editName" required></label>
+            <label>Gender
+                <select id="editGender" required>
+                    <option>Male</option><option>Female</option><option>Other</option>
+                </select>
+            </label>
+            <label>Course
+                <select id="editCourse" required>
+                    <option>CSE</option><option>ECE</option><option>IT</option><option>EE</option><option>ME</option>
+                </select>
+            </label>
+            <label>Marks<input type="number" id="editMarks" min="0" max="100" required></label>
+            <label>Email<input type="email" id="editEmail" required></label>
+            <button class="primary" type="submit">Save Changes</button>
+            <span id="editMessage" class="message"></span>
+        </form>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
